@@ -1,21 +1,68 @@
-import { Globe } from "lucide-react";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
+import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 
 export default function About() {
+  const arrowVariants = {
+    initial: { x: 0 },
+    hover: { x: 5 },
+  };
   return (
-    <div className="border rounded-2xl p-4 min-h-[500px] space-y-10">
-      <div className="flex flex-col gap-6">
-        <div className="flex items-center gap-4">
-          <Globe size={20} />
-          <p className="font-medium text-lg">ABOUT ME</p>
+    <div className="mt-10 h-[60vh]">
+      <div className="grid grid-cols-1 md:grid-cols-2 h-full gap-5">
+        <div className="flex flex-col gap-5 justify-center">
+          <h3 className="text-2xl font-semibold">
+            About me<span className="text-blue-200">.</span>
+          </h3>
+          <p>
+            I have been coding for over 5 years, beginning my journey in 2020.
+            Initially, I learned HTML, CSS, and JavaScript to build websites.
+          </p>
+          <p>
+            My first project was a simple website built with HTML, CSS, and
+            JavaScript (~mid-2020).
+          </p>
+          <p>
+            As I progressed, I focused heavily on React.js and Next.js. Now, I
+            specialize in building SaaS applications with modern web
+            technologies.
+          </p>
+          <div className="flex items-center gap-5">
+            <motion.div
+              initial="initial"
+              whileHover="hover"
+              className="inline-block"
+            >
+              <Button className="rounded-sm cursor-pointer bg-blue-400 text-white hover:bg-blue-600">
+                <i className="devicon-github-original text-xl"></i>
+                View my Github
+                <motion.span
+                  variants={arrowVariants}
+                  transition={{ type: "tween" }}
+                >
+                  <ArrowRight />
+                </motion.span>
+              </Button>
+            </motion.div>
+            <motion.div
+              initial="initial"
+              whileHover="hover"
+              className="inline-block"
+            >
+              <Button className="rounded-sm cursor-pointer bg-[#2a2a2a] text-white hover:bg-[#353535]">
+                Contact Me
+                <motion.span
+                  variants={arrowVariants}
+                  transition={{ type: "tween" }}
+                >
+                  <ArrowRight />
+                </motion.span>
+              </Button>
+            </motion.div>
+          </div>
         </div>
-        <h1 className="text-4xl font-bold">hey, I'm Anis👋</h1>
-        <p className="w-2/3 text-lg">
-          Passionate FullStack Web Developer from Bangalore, pushing the
-          boundaries of web technology to create immersive digital experiences.
-        </p>
+        <div className="border rounded-2xl"></div>
       </div>
-      <Button className="rounded-sm cursor-pointer">Contact Me</Button>
     </div>
   );
 }
