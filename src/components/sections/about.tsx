@@ -49,7 +49,7 @@ export default function About() {
               whileHover="hover"
               className="inline-block"
             >
-              <Button className="rounded-sm cursor-pointer bg-[#2a2a2a] text-white hover:bg-[#353535]">
+              <Button className="rounded-sm cursor-pointer bg-[var(--button)] text-[var(--text)] hover:bg-[var(--button-hover)]">
                 Contact Me
                 <motion.span
                   variants={arrowVariants}

@@ -1,6 +1,9 @@
 import { Button } from "../ui/button";
+import { useTheme } from "@/components/theme/theme-provider";
+import { Sun, Moon } from "lucide-react";
 
 export default function Navbar() {
+  const { setTheme, theme } = useTheme();
   return (
     <div className="h-[10vh] flex items-center justify-between">
       <div className="text-2xl font-bold">
@@ -14,6 +17,18 @@ export default function Navbar() {
           My Work
         </Button>
       </div>
+      <Button
+        size="icon"
+        variant={"ghost"}
+        className="cursor-pointer"
+        onClick={() => {
+          if (theme == "dark") setTheme("light");
+          if (theme == "light") setTheme("dark");
+        }}
+      >
+        {theme == "dark" && <Sun />}
+        {theme == "light" && <Moon />}
+      </Button>
     </div>
   );
 }
