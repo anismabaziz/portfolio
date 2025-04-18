@@ -24,7 +24,7 @@ export default function Contact() {
         projects. If you have a project in mind, or just want to say hi, feel
         free to send me a message.
       </p>
-      <div className="flex items-center gap-4">
+      <div className="flex items-center gap-4 flex-wrap">
         {contactInfo.map((info) => {
           return (
             <motion.div

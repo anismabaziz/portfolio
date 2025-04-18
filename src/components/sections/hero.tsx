@@ -1,12 +1,6 @@
-import { Globe, ArrowRight } from "lucide-react";
-import { Button } from "../ui/button";
-import { motion } from "motion/react";
+import { Globe } from "lucide-react";
 
 export default function Hero() {
-  const arrowVariants = {
-    initial: { x: 0 },
-    hover: { x: 5 },
-  };
   return (
     <div className="border rounded-2xl p-6 min-h-[500px] space-y-10">
       <div className="flex flex-col gap-6">
@@ -16,18 +10,10 @@ export default function Hero() {
         </div>
         <h1 className="text-4xl font-bold">hey, I'm Anis 👋</h1>
         <p className="w-2/3 text-lg">
-          Passionate FullStack Web Developer from Bangalore, pushing the
-          boundaries of web technology to create immersive digital experiences.
+          a computer science student, full-stack web developer, and AI/ML
+          enthusiast. I like building stuff
         </p>
       </div>
-      <motion.div initial="initial" whileHover="hover" className="inline-block">
-        <Button className="rounded-sm cursor-pointer">
-          Contact Me
-          <motion.span variants={arrowVariants} transition={{ type: "tween" }}>
-            <ArrowRight />
-          </motion.span>
-        </Button>
-      </motion.div>
     </div>
   );
 }

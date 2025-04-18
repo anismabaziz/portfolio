@@ -13,7 +13,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="border-t w-2/3 mx-auto">
+    <footer className="border-t md:w-2/3 mx-auto">
       <p className="text-[var(--text)] py-6">
         Copyright &copy; {currentYear} Baziz Anis.
       </p>
