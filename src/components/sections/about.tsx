@@ -33,7 +33,7 @@ export default function About() {
               whileHover="hover"
               className="inline-block"
             >
-              <Button className="rounded-sm cursor-pointer bg-blue-400 text-white hover:bg-blue-600 text-md">
+              <Button className="rounded-sm cursor-pointer bg-blue-500 text-white hover:bg-blue-600 text-md">
                 <i className="devicon-github-original text-xl mr-1"></i>
                 View my Github
                 <motion.span
