@@ -33,8 +33,8 @@ export default function About() {
               whileHover="hover"
               className="inline-block"
             >
-              <Button className="rounded-sm cursor-pointer bg-blue-400 text-white hover:bg-blue-600">
-                <i className="devicon-github-original text-xl"></i>
+              <Button className="rounded-sm cursor-pointer bg-blue-400 text-white hover:bg-blue-600 text-md">
+                <i className="devicon-github-original text-xl mr-1"></i>
                 View my Github
                 <motion.span
                   variants={arrowVariants}
@@ -49,7 +49,7 @@ export default function About() {
               whileHover="hover"
               className="inline-block"
             >
-              <Button className="rounded-sm cursor-pointer bg-[var(--button)] text-[var(--text)] hover:bg-[var(--button-hover)]">
+              <Button className="rounded-sm cursor-pointer bg-[var(--button)] text-[var(--text)] hover:bg-[var(--button-hover)] text-md">
                 Contact Me
                 <motion.span
                   variants={arrowVariants}
