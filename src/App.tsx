@@ -8,7 +8,7 @@ import Projects from "@/components/sections/projects";
 
 export default function App() {
   return (
-    <div className="w-3/4 mx-auto font-mono">
+    <div className="w-full px-5 md:px-0 md:w-[70%] mx-auto font-mono">
       <Navbar />
       <Hero />
       <About />

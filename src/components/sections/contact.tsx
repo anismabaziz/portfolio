@@ -4,9 +4,17 @@ import { ArrowRight } from "lucide-react";
 import clsx from "clsx";
 
 const contactInfo = [
-  { name: "Email" },
-  { name: "LinkedIn", style: "devicon-linkedin-plain colored" },
-  { name: "Twitter / X", style: "devicon-twitter-original colored" },
+  { name: "Email", link: "mailto:anismabaziz@gmail.com" },
+  {
+    name: "LinkedIn",
+    style: "devicon-linkedin-plain colored",
+    link: "https://www.linkedin.com/in/anismabaziz/",
+  },
+  {
+    name: "Twitter / X",
+    style: "devicon-twitter-original colored",
+    link: "https://x.com/anismabaziz",
+  },
 ];
 
 export default function Contact() {
@@ -15,7 +23,7 @@ export default function Contact() {
     hover: { x: 5 },
   };
   return (
-    <div className="min-h-[50vh] mt-10 space-y-5">
+    <div className="min-h-[50vh] mt-10 space-y-5" id="contact">
       <h3 className="text-2xl font-bold">
         Contact Me<span className="text-blue-200">.</span>
       </h3>
@@ -25,30 +33,33 @@ export default function Contact() {
         free to send me a message.
       </p>
       <div className="flex items-center gap-4 flex-wrap">
-        {contactInfo.map((info) => {
+        {contactInfo.map((info, idx) => {
           return (
             <motion.div
               initial="initial"
               whileHover="hover"
               className="inline-block"
+              key={idx}
             >
-              <Button
-                variant="outline"
-                className="rounded-sm cursor-pointer text-[var(--text)] hover:bg-[var(--button-transparent-hover)] text-lg bg-transparent"
-              >
-                {info.style && (
-                  <i className={clsx("text-xl mr-3", info.style)}></i>
-                )}
-                {info.style == null && <p className="text-2xl mr-3">@</p>}
-
-                {info.name}
-                <motion.span
-                  variants={arrowVariants}
-                  transition={{ type: "tween" }}
+              <a href={info.link}>
+                <Button
+                  variant="outline"
+                  className="rounded-sm cursor-pointer text-[var(--text)] hover:bg-[var(--button-transparent-hover)] text-lg bg-transparent"
                 >
-                  <ArrowRight />
-                </motion.span>
-              </Button>
+                  {info.style && (
+                    <i className={clsx("text-xl mr-3", info.style)}></i>
+                  )}
+                  {info.style == null && <p className="text-2xl mr-3">@</p>}
+
+                  {info.name}
+                  <motion.span
+                    variants={arrowVariants}
+                    transition={{ type: "tween" }}
+                  >
+                    <ArrowRight />
+                  </motion.span>
+                </Button>
+              </a>
             </motion.div>
           );
         })}
