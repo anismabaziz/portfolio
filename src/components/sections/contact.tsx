@@ -23,7 +23,7 @@ export default function Contact() {
     hover: { x: 5 },
   };
   return (
-    <div className="min-h-[50vh] mt-10 space-y-5" id="contact">
+    <div className="min-h-[20vh] my-10 space-y-5" id="contact">
       <h3 className="text-2xl font-bold">
         Contact Me<span className="text-blue-200">.</span>
       </h3>
