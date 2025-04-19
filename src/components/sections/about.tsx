@@ -99,9 +99,11 @@ export default function About() {
               );
             })}
           </div>
-          <button className="bg-transparent cursor-pointer rounded-4xl hover:bg-[var(--button-transparent-hover)] inline-flex items-center px-4 py-2 border gap-2 transition text-sm">
-            Download CV
-          </button>
+          <a href="pdf/cv.pdf" download>
+            <button className="bg-transparent cursor-pointer rounded-4xl hover:bg-[var(--button-transparent-hover)] inline-flex items-center px-4 py-2 border gap-2 transition text-sm">
+              Download CV
+            </button>
+          </a>
         </div>
       </div>
     </div>
