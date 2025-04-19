@@ -62,9 +62,12 @@ export default function Skills() {
         some of the technologies I have experience with:
       </p>
       <div className="flex items-center flex-wrap gap-3">
-        {technologies.map((technology) => {
+        {technologies.map((technology, idx) => {
           return (
-            <button className="bg-transparent cursor-pointer rounded-sm hover:bg-[var(--button-transparent-hover)] inline-flex items-center px-3 py-1 border gap-2 transition">
+            <button
+              className="bg-transparent cursor-pointer rounded-sm hover:bg-[var(--button-transparent-hover)] inline-flex items-center px-3 py-1 border gap-2 transition"
+              key={idx}
+            >
               <i className={clsx("text-xl", technology.style)}></i>
               {technology.name}
             </button>

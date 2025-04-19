@@ -6,16 +6,23 @@ export default function Navbar() {
   const { setTheme, theme } = useTheme();
   return (
     <div className="h-[10vh] flex items-center justify-between">
-      <div className="text-2xl font-bold">
-        AB<span className="text-blue-300">.</span>
-      </div>
+      <a href="/">
+        <div className="text-2xl font-bold">
+          AB<span className="text-blue-300">.</span>
+        </div>
+      </a>
+
       <div>
-        <Button variant={"ghost"} className="cursor-pointer">
-          Home
-        </Button>
-        <Button variant={"ghost"} className="cursor-pointer">
-          My Work
-        </Button>
+        <a href="/">
+          <Button variant={"ghost"} className="cursor-pointer">
+            Home
+          </Button>
+        </a>
+        <a href="#projects">
+          <Button variant={"ghost"} className="cursor-pointer">
+            My Work
+          </Button>
+        </a>
       </div>
       <Button
         size="icon"
